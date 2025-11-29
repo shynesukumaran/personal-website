@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +20,7 @@
     <header class="sticky top-0 z-50 bg-white shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <h1 class="text-2xl font-bold text-indigo-600">
-                <a href="/"> Shyne Sukumaran | All about me!</a>
+                <a href="/"> Percepshynes | The Official Website of Shyne Sukumaran</a>
             </h1>
             <nav class="space-x-4">
                 <a href="#projects" class="text-gray-600 hover:text-indigo-600 transition duration-150">Projects</a>
@@ -35,98 +36,111 @@
 
         <!-- Hero Section -->
         <section class="text-center py-16 bg-white rounded-xl shadow-lg mb-12">
-            <img src="https://placehold.co/128x128/4f46e5/ffffff/png?text=SHYNE" alt="Your Profile Photo" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-indigo-200 object-cover">
+            <img src="{{ url_for('static', filename='images/profile_pic.jpg') }}" alt="Your Profile Photo" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-indigo-200 object-cover">
             <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-3">Hello, I'm Shyne Sukumaran.</h2>
             <p class="text-xl text-gray-600 max-w-2xl mx-auto">
                 Data Engineer, Film enthusiast, and occasional Writer. This is my space to share my tech journey, thoughts, and personal interests.
             </p>
             <div class="mt-6 space-x-4">
-                <a href="mailto:your.email@example.com" class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-indigo-700 transition duration-200 font-semibold">Get In Touch</a>
-                <a href="#projects" class="inline-block bg-gray-200 text-gray-800 px-6 py-3 rounded-lg shadow-md hover:bg-gray-300 transition duration-200 font-semibold">See My Work</a>
+                <!-- MODIFIED LINK to open the modal -->
+                <button onclick="showContactModal()" class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-indigo-700 transition duration-200 font-semibold">Get In Touch</button>
+                <a href="/projects" class="inline-block bg-gray-200 text-gray-800 px-6 py-3 rounded-lg shadow-md hover:bg-gray-300 transition duration-200 font-semibold">See My Work</a>
             </div>
         </section>
 
-        <!-- Projects Section -->
+                <!-- Projects Section (UPDATED LINKS) -->
         <section id="projects" class="py-12">
             <h3 class="text-3xl font-bold text-gray-900 border-b-2 border-indigo-400 pb-2 mb-8">🛠️ Tech Projects</h3>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project Card 1 -->
+                <!-- Project Card 1: Weather Data Engineering -->
                 <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <h4 class="text-xl font-semibold text-indigo-600 mb-2">Flask Blog Engine</h4>
-                    <p class="text-gray-600 mb-4">A simple, Markdown-powered blogging system built entirely in Python (Flask) with SQLite.</p>
-                    <a href="#" class="text-sm text-indigo-500 hover:text-indigo-700 font-medium">View Project →</a>
+                    <h4 class="text-xl font-semibold text-indigo-600 mb-2">Weather Data Engineering</h4>
+                    <p class="text-gray-600 mb-4">An ETL pipeline built with Python that processes raw weather data from an API, cleans it, and loads it into a data warehouse.</p>
+                    <a href="https://github.com/shynesukumaran/weather-data-engineering" target="_blank" class="text-sm text-indigo-500 hover:text-indigo-700 font-medium">View Project →</a>
                 </div>
-                <!-- Project Card 2 -->
+                <!-- Project Card 2: Java Chat App -->
                 <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <h4 class="text-xl font-semibold text-indigo-600 mb-2">Java Chat App</h4>
-                    <p class="text-gray-600 mb-4">A multi-threaded TCP socket application demonstrating network programming in Java.</p>
-                    <a href="#" class="text-sm text-indigo-500 hover:text-indigo-700 font-medium">View Project →</a>
-                </div>
-                <!-- Project Card 3 -->
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <h4 class="text-xl font-semibold text-indigo-600 mb-2">Data Visualization Tool</h4>
-                    <p class="text-gray-600 mb-4">Uses Python's Pandas and Matplotlib to analyze and visualize public data sets.</p>
-                    <a href="#" class="text-sm text-indigo-500 hover:text-indigo-700 font-medium">View Project →</a>
+                    <h4 class="text-xl font-semibold text-indigo-600 mb-2">Personal Website Project</h4>
+                    <p class="text-gray-600 mb-4">A personal website for sharing my ideas, projects and stories(the one where you are readng this now!).</p>
+                    <a href="https://github.com/shynesukumaran/personal-website" target="_blank" class="text-sm text-indigo-500 hover:text-indigo-700 font-medium">View Project →</a>
                 </div>
             </div>
         </section>
 
-        <!-- Blog Section -->
-        <section id="blog" class="py-12">
-            <h3 class="text-3xl font-bold text-gray-900 border-b-2 border-indigo-400 pb-2 mb-8">✍️ Latest Blog Posts</h3>
+        <!-- Dynamic Blog Section (Now linking to Medium) -->
+        <section class="py-12">
+            <h3 class="text-3xl font-bold text-gray-900 border-b-2 border-indigo-400 pb-2 mb-8">✍️ Latest Blog Posts (on Medium)</h3>
             <div class="space-y-6">
-                <!-- Blog Post Snippet 1 -->
+                <!-- Hardcoded Snippets (Now linking to Medium) -->
                 <article class="bg-white p-6 rounded-xl shadow-lg">
-                    <span class="text-sm text-gray-500">October 15, 2025</span>
-                    <h4 class="text-2xl font-semibold text-gray-800 mt-1 mb-2">The Future of Asynchronous Python</h4>
-                    <p class="text-gray-600 line-clamp-2">Exploring `asyncio` and how modern Python applications are leveraging non-blocking I/O for better performance and scalability...</p>
-                    <a href="/blog/async-python" class="text-indigo-500 hover:text-indigo-700 font-medium mt-2 inline-block">Read Post →</a>
+                    <span class="text-sm text-gray-500">September 14, 2020</span>
+                    <h4 class="text-2xl font-semibold text-gray-800 mt-1 mb-2">Oh, my Consciousness!</h4>
+                    <p class="text-gray-600 line-clamp-2">I always wonder about my existence! As I experience life, each day, my questions...</p>
+                    <a href="https://medium.com/@shynesukumaran/oh-my-consciousness-97bf60563c49" target="_blank" class="text-indigo-500 hover:text-indigo-700 font-medium mt-2 inline-block">Read Post →</a>
                 </article>
-                <!-- Blog Post Snippet 2 -->
                 <article class="bg-white p-6 rounded-xl shadow-lg">
-                    <span class="text-sm text-gray-500">September 28, 2025</span>
-                    <h4 class="text-2xl font-semibold text-gray-800 mt-1 mb-2">Why Java Still Dominates Enterprise</h4>
-                    <p class="text-gray-600 line-clamp-2">A look at the JVM ecosystem, stability, and toolchain that keeps Java relevant in large-scale corporate environments...</p>
-                    <a href="/blog/java-enterprise" class="text-indigo-500 hover:text-indigo-700 font-medium mt-2 inline-block">Read Post →</a>
+                    <span class="text-sm text-gray-500">May 26, 2022</span>
+                    <h4 class="text-2xl font-semibold text-gray-800 mt-1 mb-2">The first writing</h4>
+                    <p class="text-gray-600 line-clamp-2">“You should start writing”, said Nithya...</p>
+                    <a href="https://medium.com/@shynesukumaran/the-first-writing-8c97b34d9fe2" target="_blank" class="text-indigo-500 hover:text-indigo-700 font-medium mt-2 inline-block">Read Post →</a>
                 </article>
+                <article class="bg-white p-6 rounded-xl shadow-lg">
+                    <span class="text-sm text-gray-500">May 30, 2022</span>
+                    <h4 class="text-2xl font-semibold text-gray-800 mt-1 mb-2">Life</h4>
+                    <p class="text-gray-600 line-clamp-2">Time is the God. Work is the worship. Decision is the destiny. Experience is the teacher...</p>
+                    <a href="https://medium.com/@shynesukumaran/life-f9df444add83" target="_blank" class="text-indigo-500 hover:text-indigo-700 font-medium mt-2 inline-block">Read Post →</a>
+                </article>
+            </div>
+            <div class="mt-8 text-center">
+                <a href="https://medium.com/@shynesukumaran" target="_blank" class="inline-block bg-indigo-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-indigo-600 transition duration-200 font-semibold">View All Blog Posts on Medium</a>
             </div>
         </section>
 
-        <!-- Opinions Section -->
-        <section id="opinions" class="py-12">
-            <h3 class="text-3xl font-bold text-gray-900 border-b-2 border-indigo-400 pb-2 mb-8">🗣️ Opinions & Rants</h3>
-            <blockquote class="bg-indigo-100 border-l-4 border-indigo-500 p-6 rounded-r-lg shadow-md">
-                <p class="italic text-indigo-800 text-lg">"There is nothing special about Life, and that's what makes it incredible."</p>
-                <footer class="mt-3 text-right text-indigo-600 font-semibold">— Shyne Sukumaran</footer>
-            </blockquote>
-            <div class="mt-6 text-center">
-                <a href="#" class="inline-block bg-indigo-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-indigo-600 transition duration-200">See All Opinions</a>
-            </div>
-        </section>
-
-        <!-- Hobbies Section -->
-        <section id="hobbies" class="py-12">
+        <!-- Hobbies Section (UPDATED) -->
+        <section class="py-12">
             <h3 class="text-3xl font-bold text-gray-900 border-b-2 border-indigo-400 pb-2 mb-8">✨ Hobbies & Interests</h3>
+            <!-- Updated Grid to show 8 items in 4 columns on large screens -->
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                
                 <div class="p-6 bg-white rounded-xl shadow-lg">
-                    <p class="text-4xl mb-2">🎮</p>
-                    <h4 class="font-semibold text-gray-800">Retro Gaming</h4>
-                    <p class="text-sm text-gray-500">NES, SNES, and the history of pixel art.</p>
-                </div>
+                    <p class="text-4xl mb-2">✍️</p>
+                    <h4 class="font-semibold text-gray-800">Writing</h4>
+                    <p class="text-sm text-gray-500">Love to express about life and people.</p>
+                </div>                
+                <div class="p-6 bg-white rounded-xl shadow-lg">
+                    <p class="text-4xl mb-2">📖</p>
+                    <h4 class="font-semibold text-gray-800">Reading</h4>
+                    <p class="text-sm text-gray-500">Non-fiction, spiritual and factual.</p>
+                </div>                
                 <div class="p-6 bg-white rounded-xl shadow-lg">
                     <p class="text-4xl mb-2">📸</p>
                     <h4 class="font-semibold text-gray-800">Photography</h4>
-                    <p class="text-sm text-gray-500">Landscape shots and light composition.</p>
+                    <p class="text-sm text-gray-500">Always looking for great frames to click.</p>
                 </div>
                 <div class="p-6 bg-white rounded-xl shadow-lg">
-                    <p class="text-4xl mb-2">🏔️</p>
-                    <h4 class="font-semibold text-gray-800">Hiking</h4>
-                    <p class="text-sm text-gray-500">Exploring local trails and national parks.</p>
+                    <p class="text-4xl mb-2">🎬</p>
+                    <h4 class="font-semibold text-gray-800">Film & Cinema</h4>
+                    <p class="text-sm text-gray-500">Aspiring storyteller through cinema.</p>
                 </div>
                 <div class="p-6 bg-white rounded-xl shadow-lg">
-                    <p class="text-4xl mb-2">📚</p>
-                    <h4 class="font-semibold text-gray-800">Science Fiction</h4>
-                    <p class="text-sm text-gray-500">Dune, Asimov, and exploring new worlds.</p>
+                    <p class="text-4xl mb-2">🏏</p>
+                    <h4 class="font-semibold text-gray-800">Cricket</h4>
+                    <p class="text-sm text-gray-500">Following international matches and players.</p>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-lg">
+                    <p class="text-4xl mb-2">🎙️</p>
+                    <h4 class="font-semibold text-gray-800">Listening Speeches</h4>
+                    <p class="text-sm text-gray-500">Analyzing and learning from great minds.</p>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-lg">
+                    <p class="text-4xl mb-2">🎤</p>
+                    <h4 class="font-semibold text-gray-800">Singing</h4>
+                    <p class="text-sm text-gray-500">Always singing while doing chores.</p>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-lg">
+                    <p class="text-4xl mb-2">💻</p>
+                    <h4 class="font-semibold text-gray-800">Coding</h4>
+                    <p class="text-sm text-gray-500">Learning and upgrading with personal projects.</p>
                 </div>
             </div>
         </section>
@@ -136,13 +150,84 @@
     <!-- Footer -->
     <footer class="bg-gray-800 text-white p-8 mt-12">
         <div class="max-w-7xl mx-auto text-center">
-            <p>&copy; 2025 Your Name. Built with Python & Flask.</p>
+            <p>&copy; 2025 Shyne Sukumaran. Built with Python & Flask.</p>
             <div class="mt-2 text-sm space-x-4">
-                <a href="https://github.com/yourusername" target="_blank" class="hover:text-indigo-400">GitHub</a>
-                <a href="#" class="hover:text-indigo-400">LinkedIn</a>
+                <!-- UPDATED GITHUB AND LINKEDIN LINKS -->
+                <a href="https://github.com/shynesukumaran" target="_blank" class="hover:text-indigo-400">GitHub Profile</a>
+                <a href="https://www.linkedin.com/in/shyne-sukumaran-ab3157106/" target="_blank" class="hover:text-indigo-400">LinkedIn Profile</a>
+                <a href="https://twitter.com/shynesukumaran" target="_blank" class="hover:text-indigo-400">Twitter</a>
             </div>
         </div>
     </footer>
+    
+    <!-- Contact Modal (Hidden by default) -->
+    <div id="contact-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-gray-900 bg-opacity-75 transition-opacity duration-300 ease-in-out hidden">
+        <div class="bg-white p-8 rounded-xl shadow-2xl w-full max-w-md mx-4 transform transition-all duration-300 ease-in-out">
+            <div class="flex justify-between items-start mb-6">
+                <h3 class="text-2xl font-bold text-indigo-600">Contact Information</h3>
+                <button onclick="hideContactModal()" class="text-gray-400 hover:text-gray-600 transition">
+                    <!-- Close Icon (X) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
 
+            <!-- Email Address -->
+            <div class="mb-6 p-4 bg-indigo-50 rounded-lg border border-indigo-200">
+                <h4 class="font-semibold text-lg text-indigo-800 flex items-center mb-2">
+                    <!-- Email Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0a2.25 2.25 0 00-1.88-2.238l-12-.462a2.25 2.25 0 00-1.88 2.238m19.5 0-2.12 1.577a1.125 1.125 0 01-.88 0l-7.756-5.77a.5.5 0 00-.61 0l-7.756 5.77a1.125 1.125 0 01-.88 0L2.25 6.75" />
+                    </svg>
+                    Email
+                </h4>
+                <!-- Mailto link opens user's email client -->
+                <p class="text-gray-700 break-words">
+                    <a href="mailto:sukumaranshyne@gmail.com" class="text-indigo-600 hover:text-indigo-800 font-medium underline transition">sukumaranshyne@gmail.com</a>
+                </p>
+            </div>
+
+            <!-- Postal Address -->
+            <div class="p-4 bg-gray-100 rounded-lg border border-gray-300">
+                <h4 class="font-semibold text-lg text-gray-700 flex items-center mb-2">
+                    <!-- Location Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.5-7.5 11.25-7.5 11.25S4.5 18 4.5 10.5a7.5 7.5 0 1115 0z" />
+                    </svg>
+                    Postal Address
+                </h4>
+                <address class="not-italic text-gray-700">
+                    Otto-von-Guericke Strasse 58<br>
+                    Magdeburg 39104<br>
+                    Germany
+                </address>
+            </div>
+
+            <button onclick="hideContactModal()" class="mt-8 w-full bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition font-semibold shadow-md">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function showContactModal() {
+            document.getElementById('contact-modal').classList.remove('hidden');
+            document.body.classList.add('overflow-hidden'); // Prevent background scrolling
+        }
+
+        function hideContactModal() {
+            document.getElementById('contact-modal').classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+        
+        // Optional: Close modal when clicking outside of it
+        document.getElementById('contact-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                hideContactModal();
+            }
+        });
+    </script>
 </body>
 </html>

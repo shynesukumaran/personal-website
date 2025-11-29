@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shyne Sukumaran - Personal Website</title>
+    <!-- Load Tailwind CSS via CDN for rapid, responsive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* Simple smooth scroll for internal links */
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-indigo-600">
+                <a href="/"> Shyne Sukumaran | All about me!</a>
+            </h1>
+            <nav class="space-x-4">
+                <a href="#projects" class="text-gray-600 hover:text-indigo-600 transition duration-150">Projects</a>
+                <a href="#blog" class="text-gray-600 hover:text-indigo-600 transition duration-150">Blog</a>
+                <a href="#opinions" class="text-gray-600 hover:text-indigo-600 transition duration-150">Opinions</a>
+                <a href="#hobbies" class="text-gray-600 hover:text-indigo-600 transition duration-150">Hobbies</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Hero Section -->
+        <section class="text-center py-16 bg-white rounded-xl shadow-lg mb-12">
+            <img src="https://placehold.co/128x128/4f46e5/ffffff/png?text=SHYNE" alt="Your Profile Photo" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-indigo-200 object-cover">
+            <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-3">Hello, I'm Shyne Sukumaran.</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                Data Engineer, Film enthusiast, and occasional Writer. This is my space to share my tech journey, thoughts, and personal interests.
+            </p>
+            <div class="mt-6 space-x-4">
+                <a href="mailto:your.email@example.com" class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-indigo-700 transition duration-200 font-semibold">Get In Touch</a>
+                <a href="#projects" class="inline-block bg-gray-200 text-gray-800 px-6 py-3 rounded-lg shadow-md hover:bg-gray-300 transition duration-200 font-semibold">See My Work</a>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-12">
+            <h3 class="text-3xl font-bold text-gray-900 border-b-2 border-indigo-400 pb-2 mb-8">🛠️ Tech Projects</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <h4 class="text-xl font-semibold text-indigo-600 mb-2">Flask Blog Engine</h4>
+                    <p class="text-gray-600 mb-4">A simple, Markdown-powered blogging system built entirely in Python (Flask) with SQLite.</p>
+                    <a href="#" class="text-sm text-indigo-500 hover:text-indigo-700 font-medium">View Project →</a>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <h4 class="text-xl font-semibold text-indigo-600 mb-2">Java Chat App</h4>
+                    <p class="text-gray-600 mb-4">A multi-threaded TCP socket application demonstrating network programming in Java.</p>
+                    <a href="#" class="text-sm text-indigo-500 hover:text-indigo-700 font-medium">View Project →</a>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <h4 class="text-xl font-semibold text-indigo-600 mb-2">Data Visualization Tool</h4>
+                    <p class="text-gray-600 mb-4">Uses Python's Pandas and Matplotlib to analyze and visualize public data sets.</p>
+                    <a href="#" class="text-sm text-indigo-500 hover:text-indigo-700 font-medium">View Project →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="py-12">
+            <h3 class="text-3xl font-bold text-gray-900 border-b-2 border-indigo-400 pb-2 mb-8">✍️ Latest Blog Posts</h3>
+            <div class="space-y-6">
+                <!-- Blog Post Snippet 1 -->
+                <article class="bg-white p-6 rounded-xl shadow-lg">
+                    <span class="text-sm text-gray-500">October 15, 2025</span>
+                    <h4 class="text-2xl font-semibold text-gray-800 mt-1 mb-2">The Future of Asynchronous Python</h4>
+                    <p class="text-gray-600 line-clamp-2">Exploring `asyncio` and how modern Python applications are leveraging non-blocking I/O for better performance and scalability...</p>
+                    <a href="/blog/async-python" class="text-indigo-500 hover:text-indigo-700 font-medium mt-2 inline-block">Read Post →</a>
+                </article>
+                <!-- Blog Post Snippet 2 -->
+                <article class="bg-white p-6 rounded-xl shadow-lg">
+                    <span class="text-sm text-gray-500">September 28, 2025</span>
+                    <h4 class="text-2xl font-semibold text-gray-800 mt-1 mb-2">Why Java Still Dominates Enterprise</h4>
+                    <p class="text-gray-600 line-clamp-2">A look at the JVM ecosystem, stability, and toolchain that keeps Java relevant in large-scale corporate environments...</p>
+                    <a href="/blog/java-enterprise" class="text-indigo-500 hover:text-indigo-700 font-medium mt-2 inline-block">Read Post →</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Opinions Section -->
+        <section id="opinions" class="py-12">
+            <h3 class="text-3xl font-bold text-gray-900 border-b-2 border-indigo-400 pb-2 mb-8">🗣️ Opinions & Rants</h3>
+            <blockquote class="bg-indigo-100 border-l-4 border-indigo-500 p-6 rounded-r-lg shadow-md">
+                <p class="italic text-indigo-800 text-lg">"There is nothing special about Life, and that's what makes it incredible."</p>
+                <footer class="mt-3 text-right text-indigo-600 font-semibold">— Shyne Sukumaran</footer>
+            </blockquote>
+            <div class="mt-6 text-center">
+                <a href="#" class="inline-block bg-indigo-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-indigo-600 transition duration-200">See All Opinions</a>
+            </div>
+        </section>
+
+        <!-- Hobbies Section -->
+        <section id="hobbies" class="py-12">
+            <h3 class="text-3xl font-bold text-gray-900 border-b-2 border-indigo-400 pb-2 mb-8">✨ Hobbies & Interests</h3>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                <div class="p-6 bg-white rounded-xl shadow-lg">
+                    <p class="text-4xl mb-2">🎮</p>
+                    <h4 class="font-semibold text-gray-800">Retro Gaming</h4>
+                    <p class="text-sm text-gray-500">NES, SNES, and the history of pixel art.</p>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-lg">
+                    <p class="text-4xl mb-2">📸</p>
+                    <h4 class="font-semibold text-gray-800">Photography</h4>
+                    <p class="text-sm text-gray-500">Landscape shots and light composition.</p>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-lg">
+                    <p class="text-4xl mb-2">🏔️</p>
+                    <h4 class="font-semibold text-gray-800">Hiking</h4>
+                    <p class="text-sm text-gray-500">Exploring local trails and national parks.</p>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-lg">
+                    <p class="text-4xl mb-2">📚</p>
+                    <h4 class="font-semibold text-gray-800">Science Fiction</h4>
+                    <p class="text-sm text-gray-500">Dune, Asimov, and exploring new worlds.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-8 mt-12">
+        <div class="max-w-7xl mx-auto text-center">
+            <p>&copy; 2025 Your Name. Built with Python & Flask.</p>
+            <div class="mt-2 text-sm space-x-4">
+                <a href="https://github.com/yourusername" target="_blank" class="hover:text-indigo-400">GitHub</a>
+                <a href="#" class="hover:text-indigo-400">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
